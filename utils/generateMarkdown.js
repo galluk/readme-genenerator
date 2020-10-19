@@ -75,54 +75,60 @@ const licenseObjects = [
 function generateMarkdown(data) {
   return `# ${data.title}
   ${data.badge}
-
-  ## Description 
+  
+  ## Description
   ${data.description}
-   
+  
   ## Table of Contents
-  [*Installation](#-installation)  
-  [*Usage](#-usage)  
-  [*License](#-license)  
-  [*Contributing](#-contributing)  
-  [*Tests](#-tests)  
-  [*Questions](#-questions)  
-
+  - [Installation](#-installation)  
+  - [Usage](#-usage)  
+  - [License](#-license)  
+  - [Contributing](#-contributing)  
+  - [Tests](#-tests)  
+  - [Questions](#-questions)  
+  
   ### Installation
+  To install this project please follow the instrustions below:\n
   ${data.install}
-
+  
   ### Usage
+  This project is best used in the following way:\n
   ${data.usage}
-
+  
   ### License
-  This software is available for use under the terms of the following license:
-  ${data.license}
+  Copyright [${data.currentYear}] ${data.gituser}
+
+  Licensed under the ${data.license} (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at [${data.licenseURL}](${data.licenseURL}).
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
 
   ### Contributing
+  When making contributions to this project please follow these guidelines:\n
   ${data.contribute}
   
   ### Tests
   ${data.testing}
 
   ### Questions
-  To find out more see my github at https://github.com/${data.github}.
+  To find out more view this project on github at https://github.com/${data.github}/${data.gitrepo}.
   
   For questions or to find out more about this project please email ${data.email}.
   `;
 }
 
 // get the line of text that shows the license badge for the given licenseName
-function getLicenseBadge(licenseName) {
-  let badgeInfo = "";
-
-  let license = licenseObjects.find(license => license.name === licenseName);
-  if (license) {
-    badgeInfo = `[![License](${license.badgeURL})](${license.url})`;
-  }
-  return badgeInfo;
+function getLicenseInfo(licenseName) {
+  return licenseObjects.find(license => license.name === licenseName);
 }
 
 module.exports = {
   licenseArray: licenseObjects,
   generateMarkdown: generateMarkdown,
-  getLicenseBadge: getLicenseBadge
+  getLicenseInfo: getLicenseInfo
 };
