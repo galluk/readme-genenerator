@@ -17,7 +17,7 @@ The file was to contain a section for each of the user/s answers as well as a Ta
 
 #### Initial interface
 
-![Screenshot of Password generator](https://github.com/galluk/readme-generator/blob/master/assets/screenshot.jpg)
+![Screenshot of readme generator](https://github.com/galluk/readme-generator/blob/master/assets/screenshot.jpg)
 
 <hr>
 
