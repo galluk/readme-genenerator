@@ -23,7 +23,7 @@ The file was to contain a section for each of the user/s answers as well as a Ta
 
 #### ToDo
 
-Add functionality to copy the generated password.
+Add functionality to check user input as entered to make some input (e.g. Title) required data.
 
 ### Licence
 
@@ -31,7 +31,7 @@ GNU General Public License v3.0
 
 ### Link to the github Repo
 
-<a href="https://https://github.com/galluk/readme-generator">Readme Generator</a><hr>
+<a href="https://https://github.com/galluk/readme-generator">Readme Generator</a>
 
 <hr>
 
